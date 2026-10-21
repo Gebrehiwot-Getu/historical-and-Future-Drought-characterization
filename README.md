@@ -27,7 +27,7 @@ for the manuscript submitted for peer review.
 This study characterizes historical agricultural drought patterns (2000–2025)
 and projects future drought dynamics (2030–2050) in the Tekeze Basin, North
 Ethiopia, using a multi-index approach and the Light Gradient Boosting Machine
-(LightGBM) algorithm. Five drought indices — SPI, SPEI, VCI, TCI, and VHI —
+(LightGBM) algorithm. Four drought indices — SPI, SPEI, VCI, and TCI 
 are integrated into a single Combined Drought Index (CDI), which serves as
 the target variable for the LightGBM model trained on CHIRPS precipitation
 and ERA5 temperature inputs. Future projections are generated using
@@ -82,11 +82,11 @@ Spatial maps | Seasonal analysis | Time series | Graphical abstract
 
 | Phase | R² | RMSE | MAE | NSE | PBIAS |
 |---|---|---|---|---|---|
-| Training | 0.98 | 0.27 | 0.21 | 0.98 | −0.02% |
-| Testing | 0.97 | 0.29 | 0.22 | 0.97 | 0.15% |
+| Training | 0.99 | 0.17 | 0.12 | 
+| Testing | 0.97 | 0.28 | 0.22 | 
 
-Overfitting gap (Train R² − Test R²): **0.005**
-Best iteration (early stopping): **93 boosting rounds**
+Overfitting gap (Train R² − Test R²): **0.02**
+Best iteration (automatically early stopping): **201 boosting rounds**
 
 ---
 
@@ -107,14 +107,11 @@ Best iteration (early stopping): **93 boosting rounds**
 
 ## Key Results
 
-- Basin-wide drought-affected area (CDI < −0.5) ranged from **7.63%** (2024)
-  to **100%** (2009) over the historical period.
 - LightGBM achieved R² = 0.97 on unseen test data with negligible overfitting.
 - Precipitation was identified as the dominant predictor of CDI,
   substantially outweighing mean temperature.
-- Under SSP2-4.5, drought-affected area peaked at **99.32%** in 2030.
-- Under SSP5-8.5, drought extent reached **73.97%** by 2050.
-- Projected future drought remains confined to the **moderate category**
+  
+- Projected future drought remains confined to the **mild - moderate category**
   under both scenarios — no severe or extreme drought anticipated by 2050.
 
 ---
@@ -146,4 +143,4 @@ MODIS satellite products.
 
 ---
 
-*Last updated: July 2025*
+*Last updated: 21,October,2026*
